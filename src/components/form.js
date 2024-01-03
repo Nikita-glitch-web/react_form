@@ -79,9 +79,9 @@ const SignupForm = () => {
   );
 };
 
-function App() {
+function FormApp() {
   return <SignupForm />;
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<FormApp />, rootElement);
