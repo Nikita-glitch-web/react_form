@@ -1,10 +1,6 @@
 import React from "react";
-import { ReactDOM } from "react";
 import { useFormik } from "formik";
-import validate from "../utils/validate";
-//import * as Yup from "yup";
-
-
+import { validate } from "../utils"
 
 const SignupForm = () => {
   const formik = useFormik({
@@ -20,20 +16,10 @@ const SignupForm = () => {
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-  
-
-      
-
-      
-
       <button type="submit">Submit</button>
     </form>
   );
 };
 
-function FormApp() {
-  return <SignupForm />;
-}
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<FormApp />, rootElement);
+SignupForm();
