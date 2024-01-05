@@ -16,7 +16,7 @@ const SignupForm = () => {
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-      <button type="submit">Submit</button>
+      <button className="btn" type="submit">Submit</button>
     </form>
   );
 };
