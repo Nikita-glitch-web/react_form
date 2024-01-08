@@ -1,9 +1,8 @@
 
-import React, { Component } from 'react';
-import { formik } from 'formik';
-export class Phone extends Component {
-
-  render() {
+import React from 'react';
+// import { useFormik } from 'formik';
+// import { validate } from './utils/validate'
+function Phone(props) {
     return (
       <div>
         <label htmlFor="phone">Phone</label>
@@ -11,13 +10,14 @@ export class Phone extends Component {
           id="phone"
           name="phone"
           type="phone"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.phone}
+          onChange={props.formik.handleChange}
+          onBlur={props.formik.handleBlur}
+          value={props.formik.values.phone}
         />
-        {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+        {props.formik.errors.phone ? <div>{props.formik.errors.phone}</div> : null}
       </div>
     );
   }
 
-}
+
+export default Phone;

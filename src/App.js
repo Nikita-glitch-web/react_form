@@ -1,24 +1,25 @@
 
 import React from "react";
-import { ReactDOM } from "react";
-import { useFormik } from "formik";
-import validate from "../utils/validate";
-
-//import * as Yup from "yup";
-
-// єто експортим
+import SignupForm from "./components/SignupForm";
+import FirstName from "./components/FirstName";
+import Email from "./components/Email";
+import Phone from "./components/Phone";
 
 
-function FormApp() {
+function App() {
   return (
     <div className="container">
-      <FormApp />
+      <SignupForm>
+        <FirstName className="input" />
+        <Email />
+        <Phone />
+      </SignupForm>
     </div>
-  ) 
+  ); 
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<FormApp />, rootElement);
+
+export default App;
 
 // function App() {
 //   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { validate } from "../utils"
+import validate from "../utils/validate";
 
 const SignupForm = () => {
   const formik = useFormik({
@@ -22,4 +22,4 @@ const SignupForm = () => {
 };
 
 
-SignupForm();
+export default SignupForm;

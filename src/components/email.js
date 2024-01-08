@@ -1,10 +1,9 @@
 
 
-import React, { Component } from "react";
-import { formik } from "../App";
+import React from "react";
 
-export class Email extends Component {
-  render() {
+
+function Email(props){
     return (
       <div>
         <label htmlFor="email">Email Address</label>
@@ -12,12 +11,17 @@ export class Email extends Component {
           id="email"
           name="email"
           type="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
+          onChange={props.formik.handleChange}
+          onBlur={props.formik.handleBlur}
+          value={props.formik.values.email}
         />
-        {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+        {props.formik.errors.email ? (
+          <div>{props.formik.errors.email}</div>
+        ) : null}
       </div>
     );
   }
-}
+
+  
+
+export default Email;
